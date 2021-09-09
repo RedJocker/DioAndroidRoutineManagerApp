@@ -13,14 +13,15 @@
         android:text="@string/label_title_main"
         android:textSize="24dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
+        android:textColor="@color/black_base"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-
+        android:id="@+id/fab"
+        app:srcCompat="@drawable/ic_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
