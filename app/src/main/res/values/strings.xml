@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RoutineManagerApp</string>
+    <string name="label_title_main">Tarefas</string>
+</resources>
