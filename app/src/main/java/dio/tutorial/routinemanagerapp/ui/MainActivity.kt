@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import dio.tutorial.routinemanagerapp.databinding.ActivityMainBinding
+import dio.tutorial.routinemanagerapp.datasource.TaskDataSource
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,16 +19,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.rvTasks.adapter = adapter
+        TaskDataSource.onChange = { setListChanged() }
+        setListChanged()
         initializeListeners()
 
     }
 
     private fun initializeListeners() {
         binding.fab.setOnClickListener {
-
             startActivity (
                     Intent(this, AddTaskActivity::class.java)
             )
         }
     }
+
+    fun setListChanged() {
+        binding.rvTasks.adapter = adapter
+        adapter.submitList(TaskDataSource.getList())
+    }
+
 }
