@@ -47,6 +47,10 @@ class AddTaskActivity : AppCompatActivity() {
 
                 timerPicker.show(supportFragmentManager, "TIME_PICKER_TAG")
             }
+
+            binding.btnCancel.setOnClickListener {
+                finish()
+            }
         }
     }
 }
