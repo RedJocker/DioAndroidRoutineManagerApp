@@ -2,7 +2,6 @@ package dio.tutorial.routinemanagerapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import dio.tutorial.routinemanagerapp.R
 import dio.tutorial.routinemanagerapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

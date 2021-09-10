@@ -61,8 +61,10 @@
         app:layout_constraintStart_toStartOf="@id/guide_start">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:inputType="date"
+            android:focusable="false"
+            android:inputType="none"
             android:textColor="@color/black_base"
+            android:textSize="12sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -82,7 +84,9 @@
         app:layout_constraintStart_toEndOf="@id/til_date">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:inputType="time"
+            android:focusable="false"
+            android:inputType="none"
+            android:textSize="12sp"
             android:textColor="@color/black_base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
