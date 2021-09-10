@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">RoutineManagerApp</string>
     <string name="label_title_main">Tarefas</string>
+    <string name="label_create_task">Criar Tarefa</string>
+    <string name="label_title">Título</string>
+    <string name="label_date">Data</string>
+    <string name="label_hour">Hora</string>
+    <string name="label_cancel">Cancelar</string>
 </resources>

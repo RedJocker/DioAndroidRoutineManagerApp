@@ -8,7 +8,7 @@
 
     <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
-        app:title="Criar Tarefa"
+        app:title="@string/label_create_task"
         app:navigationIcon="@drawable/ic_navigate_before"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -31,7 +31,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_title"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Título"
+        android:hint="@string/label_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -50,7 +50,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_date"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Data"
+        android:hint="@string/label_date"
         app:startIconDrawable="@drawable/ic_calendar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -71,7 +71,7 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_hour"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:hint="Hora"
+        android:hint="@string/label_hour"
         android:layout_marginStart="8dp"
         app:startIconDrawable="@drawable/ic_hour"
         android:layout_width="0dp"
@@ -92,7 +92,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_cancel"
-        android:text="Cancelar"
+        android:text="@string/label_cancel"
         android:textColor="@color/black_base"
         android:textAllCaps="false"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
@@ -105,7 +105,7 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_new_task"
-        android:text="Criar Tarefa"
+        android:text="@string/label_create_task"
         android:textAllCaps="false"
         style="@style/Widget.MaterialComponents.Button"
         android:layout_marginBottom="32dp"
