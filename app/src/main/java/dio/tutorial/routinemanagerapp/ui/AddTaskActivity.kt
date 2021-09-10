@@ -6,8 +6,11 @@ import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
 import dio.tutorial.routinemanagerapp.databinding.ActivityAddTaskBinding
+import dio.tutorial.routinemanagerapp.datasource.TaskDataSource
 import dio.tutorial.routinemanagerapp.extensions.format
-import java.util.*
+import dio.tutorial.routinemanagerapp.model.Task
+import java.util.TimeZone
+import java.util.Date
 
 class AddTaskActivity : AppCompatActivity() {
 
@@ -50,6 +53,15 @@ class AddTaskActivity : AppCompatActivity() {
 
             binding.btnCancel.setOnClickListener {
                 finish()
+            }
+
+            binding.btnNewTask.setOnClickListener {
+                val task = Task(
+                    title = binding.tilTitle.editText?.text?.toString() ?: "",
+                    date = binding.tilDate.editText?.text?.toString() ?: "",
+                    hour = binding.tilHour.editText?.text?.toString() ?: ""
+                )
+                TaskDataSource.insertTask(task)
             }
         }
     }
