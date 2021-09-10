@@ -6,4 +6,6 @@
     <string name="label_date">Data</string>
     <string name="label_hour">Hora</string>
     <string name="label_cancel">Cancelar</string>
+    <string name="placeholder_title_item">passear com cachorro invisivel</string>
+    <string name="placeholder_date_time_item">10/10/2110 10:10</string>
 </resources>
