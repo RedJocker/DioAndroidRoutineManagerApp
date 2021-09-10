@@ -41,6 +41,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:inputType="text"
+            android:textColor="@color/black_base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -61,6 +62,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:inputType="date"
+            android:textColor="@color/black_base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -80,11 +82,40 @@
         app:layout_constraintStart_toEndOf="@id/til_date">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:inputType="date"
+            android:inputType="time"
+            android:textColor="@color/black_base"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        android:text="Cancelar"
+        android:textColor="@color/black_base"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintBottom_toTopOf="@id/btn_new_task"
+        app:layout_constraintStart_toStartOf="@id/guide_start"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_new_task"
+        android:text="Criar Tarefa"
+        android:textAllCaps="false"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_marginBottom="32dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guide_end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guide_start"/>
+
+
 
 
 
