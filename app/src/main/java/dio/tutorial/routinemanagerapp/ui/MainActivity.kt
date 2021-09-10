@@ -3,6 +3,7 @@ package dio.tutorial.routinemanagerapp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import dio.tutorial.routinemanagerapp.databinding.ActivityMainBinding
 import dio.tutorial.routinemanagerapp.datasource.TaskDataSource
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.rvTasks.adapter = adapter
-        TaskDataSource.onChange = { setListChanged() }
+        TaskDataSource.onChange = ::setListChanged
         setListChanged()
         initializeListeners()
 
@@ -29,11 +30,22 @@ class MainActivity : AppCompatActivity() {
         binding.fab.setOnClickListener {
             startActivity (
                     Intent(this, AddTaskActivity::class.java)
+
             )
+
+        }
+
+        adapter.listenerEdit = {
+            val intent = Intent(this, UpdateTaskActivity::class.java)
+            intent.putExtra("oldTask", it)
+            startActivity(intent)
+        }
+        adapter.listenerDelete = {
+            Log.i("INFO", "deletelistener called $it")
         }
     }
 
-    fun setListChanged() {
+    private fun setListChanged() {
         binding.rvTasks.adapter = adapter
         adapter.submitList(TaskDataSource.getList())
     }
