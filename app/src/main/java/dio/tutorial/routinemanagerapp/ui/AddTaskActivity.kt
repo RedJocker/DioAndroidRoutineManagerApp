@@ -62,7 +62,11 @@ class AddTaskActivity : AppCompatActivity() {
                     hour = binding.tilHour.editText?.text?.toString() ?: ""
                 )
                 TaskDataSource.insertTask(task)
+                finish()
             }
+
+            binding.toolbar.setNavigationOnClickListener { finish() }
+
         }
     }
 }
