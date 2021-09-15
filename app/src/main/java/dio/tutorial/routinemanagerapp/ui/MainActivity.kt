@@ -3,7 +3,6 @@ package dio.tutorial.routinemanagerapp.ui
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import dio.tutorial.routinemanagerapp.databinding.ActivityMainBinding
 import dio.tutorial.routinemanagerapp.datasource.TaskDataSource
 
@@ -47,5 +46,4 @@ class MainActivity : AppCompatActivity() {
         binding.rvTasks.adapter = adapter
         adapter.submitList(TaskDataSource.getList())
     }
-
 }

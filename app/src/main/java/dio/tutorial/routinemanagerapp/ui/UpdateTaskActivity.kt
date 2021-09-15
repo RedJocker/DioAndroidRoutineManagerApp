@@ -1,7 +1,7 @@
 package dio.tutorial.routinemanagerapp.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.datepicker.MaterialDatePicker
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
@@ -9,8 +9,8 @@ import dio.tutorial.routinemanagerapp.databinding.ActivityUpdateTaskBinding
 import dio.tutorial.routinemanagerapp.datasource.TaskDataSource
 import dio.tutorial.routinemanagerapp.extensions.format
 import dio.tutorial.routinemanagerapp.model.Task
-import java.util.TimeZone
 import java.util.Date
+import java.util.TimeZone
 
 class UpdateTaskActivity : AppCompatActivity() {
 
@@ -35,7 +35,6 @@ class UpdateTaskActivity : AppCompatActivity() {
         }
 
         initializeListeners()
-
     }
 
     private fun  initializeListeners() {
@@ -72,8 +71,6 @@ class UpdateTaskActivity : AppCompatActivity() {
             timerPicker.show(supportFragmentManager, "TIME_PICKER_TAG")
         }
 
-
-
         binding.btnUpdateTask.setOnClickListener {
             val oldTask = oldTask
             if(oldTask != null) {
@@ -88,9 +85,5 @@ class UpdateTaskActivity : AppCompatActivity() {
                 finish()
             }
         }
-
-
-
-
     }
 }

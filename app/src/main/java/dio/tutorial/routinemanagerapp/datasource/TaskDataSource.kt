@@ -28,8 +28,4 @@ object TaskDataSource {
         list.remove(task)
         onChange()
     }
-
-
-
-
 }

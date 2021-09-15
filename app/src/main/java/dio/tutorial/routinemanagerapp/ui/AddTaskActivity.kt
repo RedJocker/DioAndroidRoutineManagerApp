@@ -22,7 +22,6 @@ class AddTaskActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         initializeListeners()
-
     }
 
     private fun  initializeListeners() {
