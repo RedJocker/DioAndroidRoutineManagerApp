@@ -30,18 +30,16 @@ class MainActivity : AppCompatActivity() {
         binding.fab.setOnClickListener {
             startActivity (
                     Intent(this, AddTaskActivity::class.java)
-
             )
-
         }
 
-        adapter.listenerEdit = {
+        adapter.listenerEdit = { task ->
             val intent = Intent(this, UpdateTaskActivity::class.java)
-            intent.putExtra("oldTask", it)
+            intent.putExtra("oldTask", task)
             startActivity(intent)
         }
-        adapter.listenerDelete = {
-            Log.i("INFO", "deletelistener called $it")
+        adapter.listenerDelete = { task ->
+            TaskDataSource.deleteTask(task)
         }
     }
 
