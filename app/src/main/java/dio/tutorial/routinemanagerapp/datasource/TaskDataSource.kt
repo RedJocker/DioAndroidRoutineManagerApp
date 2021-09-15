@@ -28,4 +28,8 @@ object TaskDataSource {
         list.remove(task)
         onChange()
     }
+
+    fun isEmpty(): Boolean {
+        return list.isEmpty()
+    }
 }

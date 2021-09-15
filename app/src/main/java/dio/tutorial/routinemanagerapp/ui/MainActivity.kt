@@ -1,8 +1,10 @@
 package dio.tutorial.routinemanagerapp.ui
 
 import android.content.Intent
+import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import dio.tutorial.routinemanagerapp.databinding.ActivityMainBinding
 import dio.tutorial.routinemanagerapp.datasource.TaskDataSource
 
@@ -45,5 +47,10 @@ class MainActivity : AppCompatActivity() {
     private fun setListChanged() {
         binding.rvTasks.adapter = adapter
         adapter.submitList(TaskDataSource.getList())
+        binding.emptyState.emptyState.visibility =   if(TaskDataSource.isEmpty()) {
+            View.VISIBLE
+        } else {
+            View.GONE
+        }
     }
 }

@@ -11,4 +11,5 @@
     <string name="label_edit">Editar</string>
     <string name="label_delete">Deletar</string>
     <string name="label_title_edit">Editar tarefa</string>
+    <string name="empty_state_title">Ops! Você não possui\n nenhuma tarefa hoje</string>
 </resources>
